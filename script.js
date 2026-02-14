@@ -13,7 +13,7 @@ const newsData = [
     {
         title: "The POWERR Project Initiative",
         image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=500",
-        description: "Redefining women's leadership through strategic institutional advocacy and economic empowerment.",
+        description: "greenefining women's leadership through strategic institutional advocacy and economic empowerment.",
         date: "JAN 2026",
         fullStory: "The POWERR Project (Promoting Women’s Equality, Rights, and Responsibilities) is our flagship institutional reform program. By working directly with community gatekeepers and traditional councils, we are creating sustainable pathways for women to enter local governance. This month, we successfully trained 40 women leaders in conflict mediation, marking a shift in how peace is negotiated at the grassroots level."
     },
@@ -37,7 +37,7 @@ function displayNews() {
             <div class="border-l border-b border-black p-12 group hover:bg-black hover:text-white transition-all duration-700" 
                  data-aos="fade-up" 
                  data-aos-delay="${index * 150}">
-                <p class="text-red-600 text-[10px] font-black mb-6 tracking-[0.3em] uppercase">${item.date}</p>
+                <p class="text-green-600 text-[10px] font-black mb-6 tracking-[0.3em] uppercase">${item.date}</p>
                 <div class="overflow-hidden mb-8 h-64 bg-gray-100">
                     <img src="${item.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-1000">
                 </div>
@@ -45,7 +45,7 @@ function displayNews() {
                 <p class="text-gray-500 group-hover:text-gray-300 text-sm mb-8 leading-relaxed">${item.description}</p>
                 
                 <button onclick="openNewsModal(${index})" class="flex items-center gap-4 group/btn">
-                    <div class="w-8 h-[2px] bg-red-600 group-hover/btn:w-12 transition-all"></div>
+                    <div class="w-8 h-[2px] bg-green-600 group-hover/btn:w-12 transition-all"></div>
                     <span class="text-[10px] font-black uppercase tracking-widest">Read Full Story</span>
                 </button>
             </div>`;
@@ -60,18 +60,18 @@ function openNewsModal(index) {
 
     // Injects editorial layout into the modal
     container.innerHTML = `
-        <p class="text-red-600 font-black tracking-[.3em] uppercase text-xs mb-4">${news.date}</p>
+        <p class="text-green-600 font-black tracking-[.3em] uppercase text-xs mb-4">${news.date}</p>
         <h2 class="text-4xl md:text-6xl font-black uppercase italic mb-10 leading-none tracking-tighter">${news.title}</h2>
         <div class="w-full h-[50vh] overflow-hidden mb-12 shadow-2xl">
             <img src="${news.image}" class="w-full h-full object-cover">
         </div>
         <div class="max-w-2xl mx-auto">
-            <div class="text-xl text-gray-800 leading-relaxed space-y-6 first-letter:text-7xl first-letter:font-black first-letter:text-red-600 first-letter:mr-3 first-letter:float-left">
+            <div class="text-xl text-gray-800 leading-relaxed space-y-6 first-letter:text-7xl first-letter:font-black first-letter:text-green-600 first-letter:mr-3 first-letter:float-left">
                 ${news.fullStory}
             </div>
             <div class="mt-16 pt-10 border-t border-gray-100 flex justify-between items-center">
                 <p class="text-[10px] font-black uppercase tracking-widest text-gray-400">GEPaDC Global Dispatch</p>
-                <button onclick="toggleModal(); closeNewsModal();" class="bg-black text-white px-8 py-4 font-black text-[10px] uppercase tracking-widest hover:bg-red-600 transition">Donate to this cause</button>
+                <button onclick="toggleModal(); closeNewsModal();" class="bg-black text-white px-8 py-4 font-black text-[10px] uppercase tracking-widest hover:bg-green-600 transition">Donate to this cause</button>
             </div>
         </div>
     `;
@@ -161,3 +161,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 'donorMsg', 'donorForm', 'donorSubmitBtn');
     });
 });
+
