@@ -11,7 +11,7 @@ const newsData = [
         fullStory: "In the wake of devastating seasonal floods, GEPaDC has mobilized emergency teams to the frontlines in Borno State. Our response focuses on the 'Protection-First' model, ensuring that displaced women and children have access to clean water (WASH) and safe spaces. We are currently supporting over 500 households with dignity kits and psychological first aid to mitigate the secondary trauma of displacement."
     },
     {
-        title: "The POWERR Project Initiative",
+        title: "The POWER Project Initiative",
         image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=500",
         description: "greenefining women's leadership through strategic institutional advocacy and economic empowerment.",
         date: "JAN 2026",
@@ -161,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 'donorMsg', 'donorForm', 'donorSubmitBtn');
     });
 });
+
 
 
 
