@@ -34,7 +34,7 @@ function displayNews() {
     
     newsData.forEach((item, index) => {
         grid.innerHTML += `
-            <div class="border-l border-b border-green p-12 group hover:bg-green hover:text-white transition-all duration-700" 
+            <div class="border-l border-b border-green p-12 group hover:bg-green hover:text-black transition-all duration-700" 
                  data-aos="fade-up" 
                  data-aos-delay="${index * 150}">
                 <p class="text-green-600 text-[10px] font-green mb-6 tracking-[0.3em] uppercase">${item.date}</p>
@@ -71,7 +71,7 @@ function openNewsModal(index) {
             </div>
             <div class="mt-16 pt-10 border-t border-gray-100 flex justify-between items-center">
                 <p class="text-[10px] font-green uppercase tracking-widest text-gray-400">GEPaDC Global Dispatch</p>
-                <button onclick="toggleModal(); closeNewsModal();" class="bg-green text-white px-8 py-4 font-green text-[10px] uppercase tracking-widest hover:bg-green-600 transition">Donate to this cause</button>
+                <button onclick="toggleModal(); closeNewsModal();" class="bg-green text-black px-8 py-4 font-green text-[10px] uppercase tracking-widest hover:bg-green-600 transition">Donate to this cause</button>
             </div>
         </div>
     `;
@@ -161,5 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 'donorMsg', 'donorForm', 'donorSubmitBtn');
     });
 });
+
 
 
