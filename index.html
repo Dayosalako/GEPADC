@@ -3,174 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEPaDC | Global Excellence in Gender Equality</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>GEPaDC | Gender Equality Peace and Development Centre</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <link rel="apple-touch-icon" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <style>
-        /* NGO PROFESSIONAL FONT REPLACEMENT */
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,700;1,900&family=Inter:wght@300;400;700&display=swap');
-        
-        :root { --brand-green: #E61E2A; }
-        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        :root { --brand-green: #2D5A27; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #0a0a0a; color: white; }
         .font-heading { font-family: 'Montserrat', sans-serif; }
-
-        /* Smooth Scrolling Marquee */
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .marquee-container {
-            overflow: hidden;
-            white-space: nowrap;
-            display: flex;
-            position: relative;
-        }
-        .marquee-content {
-            display: flex;
-            animation: scroll 30s linear infinite;
-        }
-        .marquee-item {
-            flex: 0 0 auto;
-            padding: 0 4rem;
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: rgba(255,255,255,0.1);
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .hero-overlay { background: linear-gradient(75deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); }
-        .text-outline { -webkit-text-stroke: 1px rgba(255,255,255,0.3); color: transparent; }
         
-        /* Logo and Navigation Tweaks */
-        .nav-logo { 
-            height: 48px; 
-            width: auto; 
-            object-fit: contain; 
-            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.05));
-        }
+        /* Mobile-First Typography Fix */
+        .hero-title { font-size: clamp(3rem, 10vw, 9rem); line-height: 0.9; }
+        .section-title { font-size: clamp(2rem, 6vw, 5rem); }
 
-        nav { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-
-        /* Professional Footer Input Styling */
-        footer input::placeholder {
-            color: rgba(255, 255, 255, 0.3);
-            text-transform: uppercase;
-            font-size: 10px;
-            letter-spacing: 0.1em;
-        }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .marquee-container { overflow: hidden; white-space: nowrap; display: flex; }
+        .marquee-content { display: flex; animation: scroll 30s linear infinite; }
+        .marquee-item { flex: 0 0 auto; padding: 0 3rem; font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 900; color: rgba(255,255,255,0.1); text-transform: uppercase; font-family: 'Montserrat', sans-serif; }
+        
+        .hero-overlay { background: linear-gradient(75deg, rgba(0,0,0,1) 35%, rgba(0,0,0,0.3) 100%); }
+        .text-outline { -webkit-text-stroke: 1px rgba(255,255,255,0.3); color: transparent; }
+        .nav-logo { height: 40px; width: auto; object-fit: contain; }
     </style>
 </head>
-<body class="bg-[#0a0a0a] text-white">
+<body>
 
-    <div class="bg-white text-green py-2 px-6 md:px-10 flex justify-between items-center text-[9px] font-green tracking-[0.3em] uppercase border-b border-gray-100">
+    <div class="bg-white text-black py-2 px-6 flex justify-between items-center text-[8px] md:text-[9px] font-black tracking-[0.2em] uppercase">
         <div id="liveDate"></div>
         <div class="flex gap-4">
-            <span class="text-green-600">Live Status:</span>
+            <span class="text-[#2D5A27]">HQ Status:</span>
             <span id="liveTime"></span>
         </div>
     </div>
 
     <nav class="flex justify-between items-center py-4 px-6 md:px-10 sticky top-0 bg-white shadow-sm z-[100] border-b border-gray-100">
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3">
             <img src="logo.png" alt="Logo" class="nav-logo">
-            <div class="text-3xl font-heading text-green-600 tracking-tighter italic">GEPaDC</div>
+            <div class="text-xl md:text-2xl font-heading text-[#2D5A27] tracking-tighter italic">GEPaDC</div>
         </div>
-        
-        <div class="hidden lg:flex space-x-10 font-bold text-[11px] uppercase tracking-[0.2em] text-[#1a1a1a]">
-            <a href="index.html" class="text-green-600 relative group">Home<span class="absolute bottom-0 left-0 w-full h-0.5 bg-green-600"></span></a>
-            <a href="about.html" class="hover:text-green-600 transition duration-300">Mission</a>
-            <a href="programs.html" class="hover:text-green-600 transition duration-300">Impact</a>
-            <a href="volunteer.html" class="hover:text-green-600 transition duration-300">Join</a>
-            <a href="contact.html" class="hover:text-green-600 transition duration-300">Contacts</a>
+        <div class="hidden lg:flex space-x-8 font-bold text-[10px] uppercase tracking-widest text-[#1a1a1a]">
+            <a href="index.html" class="text-[#2D5A27]">Home</a>
+            <a href="about.html" class="hover:text-[#2D5A27] transition">Mission</a>
+            <a href="programs.html" class="hover:text-[#2D5A27] transition">Impact</a>
+            <a href="volunteer.html" class="hover:text-[#2D5A27] transition">Join</a>
+            <a href="contact.html" class="hover:text-[#2D5A27] transition">HQ</a>
         </div>
-
-        <button onclick="toggleModal()" class="group relative px-8 py-3 bg-green-600 overflow-hidden shadow-lg shadow-green-600/20">
-            <span class="relative z-10 font-green text-xs uppercase italic text-white">Donate Now</span>
-            <div class="absolute inset-0 bg-[#1a1a1a] translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300"></div>
-        </button>
+        <button onclick="toggleModal()" class="px-6 py-2 bg-[#2D5A27] text-white font-black text-[10px] uppercase italic shadow-lg hover:bg-black transition">Donate</button>
     </nav>
 
-    <section class="relative h-screen flex items-center">
+    <section class="relative h-[85vh] md:h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070" class="w-full h-full object-cover grayscale-[20%]">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
         <div class="relative z-10 container mx-auto px-6 md:px-10">
-            <div data-aos="fade-up" data-aos-duration="1500">
-                <h2 class="text-green-600 font-green tracking-[0.5em] uppercase text-xs mb-6 font-heading">Humanitarian Leadership Nigeria</h2>
-                <h1 class="text-6xl md:text-[10rem] font-green leading-[0.85] italic mb-8 uppercase tracking-tighter font-heading">
-                    Equality <br> <span class="text-outline">is a</span> <br> <span class="text-green-600">Right.</span>
+            <div data-aos="fade-up">
+                <h2 class="text-[#2D5A27] font-black tracking-[0.4em] uppercase text-[9px] mb-4">CAC/IT/39885 • Est. 2008</h2>
+                <h1 class="hero-title font-black italic mb-6 uppercase tracking-tighter font-heading">
+                    Humanity <br> <span class="text-outline">Over</span> <br> <span class="text-[#2D5A27]">Conflict.</span>
                 </h1>
-                <p class="text-gray-400 text-lg md:text-xl max-w-xl mb-12 font-light leading-relaxed">
-                    Surpassing global standards in gender-based violence response and peacebuilding. We don't just provide aid; we greenefine protection.
+                <p class="text-gray-400 text-xs md:text-lg max-w-xl mb-10 font-light leading-relaxed">
+                    Working for gender equality, empowerment of women and girls, peace, and sustainable development across conflict-affected populations in Nigeria.
                 </p>
-                <div class="flex items-center gap-8">
-                    <button onclick="toggleModal()" class="bg-white text-black px-12 py-5 font-green uppercase text-xs tracking-widest hover:bg-green-600 hover:text-white transition">Get Involved</button>
-                    <div class="hidden md:block w-24 h-[1px] bg-green-600"></div>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500 italic">Scroll to Explore</span>
-                </div>
+                <button onclick="toggleModal()" class="bg-white text-black px-8 py-4 font-black uppercase text-[10px] tracking-widest hover:bg-[#2D5A27] hover:text-white transition">Get Involved</button>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-[#050505] border-y border-white/5 overflow-hidden">
-        <p class="text-center text-[10px] font-green uppercase tracking-[0.5em] text-green-600 mb-10 font-heading">Strategic Alliances</p>
+    <section class="py-12 bg-[#050505] border-y border-white/5">
         <div class="marquee-container">
             <div class="marquee-content">
                 <div class="marquee-item italic">USAID</div>
                 <div class="marquee-item italic">UN Women</div>
                 <div class="marquee-item italic">Save the Children</div>
-                <div class="marquee-item italic">International Alert</div>
-                <div class="marquee-item italic">World Bank</div>
                 <div class="marquee-item italic">UNICEF</div>
+                <div class="marquee-item italic">World Bank</div>
                 <div class="marquee-item italic">USAID</div>
                 <div class="marquee-item italic">UN Women</div>
-                <div class="marquee-item italic">Save the Children</div>
-                <div class="marquee-item italic">International Alert</div>
-                <div class="marquee-item italic">World Bank</div>
-                <div class="marquee-item italic">UNICEF</div>
+                <div class="marquee-item italic">Save the Children International</div>
+                <div class="marquee-item italic">GIZ</div>
+                <div class="marquee-item italic">UNDP/DGD</div>
+                <div class="marquee-item italic">NSRP/British Council</div>
+                <div class="marquee-item italic">Managing Conflict in Nigeria (EU/British Council)</div>
+                <div class="marquee-item italic">Plan International</div>
+                <div class="marquee-item italic">DFID ProsPINE</div>
+                <div class="marquee-item italic">ECHO 4</div>
+                <div class="marquee-item italic">SC Norway</div>
+                <div class="marquee-item italic">NJR</div>
+                <div class="marquee-item italic">EU Consortium</div>
+                <div class="marquee-item italic">ECW MYRP</div>
+                <div class="marquee-item italic">Italian Grant</div>
+                <div class="marquee-item italic">UNFPA</div>
             </div>
         </div>
     </section>
 
-    <section class="py-32 container mx-auto px-6 md:px-10">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-l border-white/10">
-            <div class="pl-8" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-7xl font-green text-white italic font-heading">15<span class="text-green-600">+</span></h3>
-                <p class="text-gray-500 uppercase text-[10px] font-green tracking-[0.3em] mt-4">Legacy Years</p>
-            </div>
-            <div class="pl-8 border-l border-white/10" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-7xl font-green text-white italic font-heading">50<span class="text-green-600">K</span></h3>
-                <p class="text-gray-500 uppercase text-[10px] font-green tracking-[0.3em] mt-4">Lives Empowegreen</p>
-            </div>
-            <div class="pl-8 border-l border-white/10" data-aos="fade-up" data-aos-delay="300">
-                <h3 class="text-7xl font-green text-white italic font-heading">100<span class="text-green-600">+</span></h3>
-                <p class="text-gray-500 uppercase text-[10px] font-green tracking-[0.3em] mt-4">Expert Force</p>
-            </div>
-            <div class="pl-8 border-l border-white/10" data-aos="fade-up" data-aos-delay="400">
-                <h3 class="text-7xl font-green text-white italic font-heading">01<span class="text-green-600">#</span></h3>
-                <p class="text-gray-500 uppercase text-[10px] font-green tracking-[0.3em] mt-4">Regional Rank</p>
-            </div>
+    <section class="py-24 container mx-auto px-6 md:px-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-l border-white/10">
+            <div class="pl-6" data-aos="fade-up"><h3 class="text-4xl md:text-6xl font-black italic font-heading">16<span class="text-[#2D5A27]">+</span></h3><p class="text-gray-500 uppercase text-[9px] font-black tracking-widest mt-2">Years of Impact</p></div>
+            <div class="pl-6 border-l border-white/10" data-aos="fade-up" data-aos-delay="100"><h3 class="text-4xl md:text-6xl font-black italic font-heading">50<span class="text-[#2D5A27]">K</span></h3><p class="text-gray-500 uppercase text-[9px] font-black tracking-widest mt-2">Lives Empowered</p></div>
+            <div class="pl-6 border-l border-white/10" data-aos="fade-up" data-aos-delay="200"><h3 class="text-4xl md:text-6xl font-black italic font-heading">100<span class="text-[#2D5A27]">+</span></h3><p class="text-gray-500 uppercase text-[9px] font-black tracking-widest mt-2">Field Experts</p></div>
+            <div class="pl-6 border-l border-white/10" data-aos="fade-up" data-aos-delay="300"><h3 class="text-4xl md:text-6xl font-black italic font-heading">01<span class="text-[#2D5A27]">#</span></h3><p class="text-gray-500 uppercase text-[9px] font-black tracking-widest mt-2">Regional Rank</p></div>
         </div>
     </section>
 
-    <section class="py-32 bg-white text-green">
+    <section class="py-24 bg-white text-black">
         <div class="container mx-auto px-6 md:px-10">
-            <div class="mb-20 flex justify-between items-end">
-                <h2 class="text-6xl font-green italic uppercase leading-none font-heading">Global <br> Dispatch</h2>
-                <a href="archive.html" class="text-[10px] font-green border-b-2 border-green-600 pb-2 uppercase tracking-[0.3em] hover:text-green-600 transition-all">
-                    Explore Full Archive
+            <div class="mb-16 flex justify-between items-end">
+                <h2 class="text-4xl md:text-6xl font-black italic uppercase font-heading">Global <br> Dispatch</h2>
+                <a href="archive.html" class="text-[9px] font-black border-b-2 border-[#2D5A27] pb-2 uppercase tracking-widest hover:text-[#2D5A27] transition">View Archive</a>
+            </div>
+            <div id="news-grid" class="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-black"></div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#050505] border-t border-white/5">
+    <div class="container mx-auto px-6 md:px-10">
+        <div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+            <div>
+                <h2 class="text-[#2D5A27] font-black tracking-[0.4em] uppercase text-[9px] mb-4">Operational Pulse</h2>
+                <h3 class="text-4xl md:text-6xl font-black italic uppercase font-heading text-white">Field <br> Perspectives</h3>
+            </div>
+            <p class="text-gray-500 text-xs max-w-xs uppercase font-bold tracking-widest leading-relaxed">
+                Real-time updates from our protection and peacebuilding missions across Nigeria.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="group relative overflow-hidden aspect-square bg-gray-900 border border-white/5" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Field Work">
+                <a href="https://www.instagram.com/gepadc/" target="_blank" class="absolute inset-0 bg-[#2D5A27]/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 text-center text-white">
+                    <i class="fab fa-instagram text-2xl mb-2"></i>
+                    <span class="text-[10px] font-black uppercase tracking-widest">Instagram</span>
                 </a>
             </div>
-            <div id="news-grid" class="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-green">
-                </div>
+            <div class="group relative overflow-hidden aspect-[4/5] md:row-span-2 bg-gray-900 border border-white/5" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Community Outreach">
+                <a href="https://web.facebook.com/GEPaDC.Nig" target="_blank" class="absolute inset-0 bg-[#2D5A27]/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 text-center text-white">
+                    <i class="fab fa-facebook-f text-2xl mb-2"></i>
+                    <span class="text-[10px] font-black uppercase tracking-widest">Facebook Feed</span>
+                </a>
+            </div>
+            <div class="group relative overflow-hidden aspect-video md:col-span-2 bg-gray-900 border border-white/5" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1524069290683-0457abfe42c3?q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Mission Video">
+                <a href="https://www.youtube.com/@gepadc370" target="_blank" class="absolute inset-0 bg-[#2D5A27]/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 text-center text-white">
+                    <i class="fab fa-youtube text-2xl mb-2"></i>
+                    <span class="text-[10px] font-black uppercase tracking-widest">Watch Our Work</span>
+                </a>
+            </div>
+            <div class="group relative overflow-hidden aspect-square bg-gray-900 border border-white/5" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Advocacy Updates">
+                <a href="https://twitter.com/GEPaDC" target="_blank" class="absolute inset-0 bg-[#2D5A27]/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 text-center text-white">
+                    <i class="fab fa-x-twitter text-2xl mb-2"></i>
+                    <span class="text-[10px] font-black uppercase tracking-widest">X Updates</span>
+                </a>
+            </div>
+            
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
 <footer class="bg-[#0a0a0a] pt-24 pb-12 px-6 md:px-10 border-t border-white/10 font-sans">
     <div class="container mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
@@ -181,104 +177,104 @@
                     <span class="text-2xl font-heading text-white tracking-tighter italic">GEPaDC</span>
                 </div>
                 <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
-                    Leading the frontier of gender-based justice and humanitarian protection in Western Africa. An institution built on the principles of equity, dignity, and sustainable peace.
+                    Leading the frontier of gender-based justice and humanitarian protection in Western Africa. Built on principles of equity and dignity.
                 </p>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all"><i class="fab fa-instagram"></i></a>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://web.facebook.com/GEPaDC.Nig" target="_blank" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#2D5A27] hover:border-[#2D5A27] transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/GEPaDC" target="_blank" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#2D5A27] hover:border-[#2D5A27] transition-all"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/gepadc/" target="_blank" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#2D5A27] hover:border-[#2D5A27] transition-all"><i class="fab fa-instagram"></i></a>
+                    <a href="https://ng.linkedin.com/company/gepadcnig" target="_blank" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#2D5A27] hover:border-[#2D5A27] transition-all"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@gepadc370" target="_blank" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#2D5A27] hover:border-[#2D5A27] transition-all"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
             <div>
-                <h4 class="text-white font-green text-[10px] uppercase tracking-[0.3em] mb-10 border-l-2 border-green-600 pl-4">Programmatic Sectors</h4>
-                <ul class="space-y-4 text-gray-500 text-[11px] font-bold uppercase tracking-widest">
-                    <li><a href="programs.html" class="hover:text-green-600 transition">Protection & WASH</a></li>
-                    <li><a href="programs.html" class="hover:text-green-600 transition">Peacebuilding & Security</a></li>
-                    <li><a href="programs.html" class="hover:text-green-600 transition">Economic Empowerment</a></li>
-                    <li><a href="archive.html" class="hover:text-green-600 transition">Institutional Archive</a></li>
-                    <li><a href="volunteer.html" class="hover:text-green-600 transition">Field Operations</a></li>
+                <h4 class="text-white font-black text-[10px] uppercase tracking-[0.3em] mb-10 border-l-2 border-[#2D5A27] pl-4">State Operations</h4>
+                <ul class="space-y-4 text-gray-400 text-[10px] font-bold uppercase tracking-widest leading-relaxed">
+                    <li><span class="text-white">Adamawa:</span> Coper Lane, Zone 3, Jimeta, Yola</li>
+                    <li><span class="text-white">Borno:</span> No 7 Nguru Street Polo close, Old GRA</li>
+                    <li><span class="text-white">Kaduna:</span> Sir Patrick Yakowa Street, Karji</li>
+                    <li><span class="text-white">Sokoto:</span> No 1 Abuja Road, GRA, Sokoto</li>
+                    <li><span class="text-white">Yobe:</span> Maisandari Beside Damaturu PHC</li>
                 </ul>
             </div>
 
             <div>
-                <h4 class="text-white font-green text-[10px] uppercase tracking-[0.3em] mb-10 border-l-2 border-green-600 pl-4">Global HQ</h4>
+                <h4 class="text-white font-black text-[10px] uppercase tracking-[0.3em] mb-10 border-l-2 border-[#2D5A27] pl-4">Global HQ</h4>
                 <ul class="space-y-6 text-gray-400 text-sm">
                     <li class="flex gap-4">
-                        <i class="fas fa-map-marker-alt text-green-600 mt-1"></i>
-                        <span>No. 12 Justice Avenue,<br>Maiduguri, Borno State, Nigeria</span>
+                        <i class="fas fa-map-marker-alt text-[#2D5A27] mt-1"></i>
+                        <span>No 1, Cardinal Ekandem Street, 32 Crescent, Gwarinpa Estate, FCT, Abuja.</span>
                     </li>
                     <li class="flex gap-4">
-                        <i class="fas fa-envelope text-green-600 mt-1"></i>
-                        <span class="break-all">institutional.response@gepadc.org</span>
+                        <i class="fas fa-envelope text-[#2D5A27] mt-1"></i>
+                        <span class="break-all">podonli@gepadc.org</span>
                     </li>
                     <li class="flex gap-4">
-                        <i class="fas fa-phone-alt text-green-600 mt-1"></i>
-                        <span>+234 (0) 800 GEPaDC HQ</span>
+                        <i class="fas fa-phone-alt text-[#2D5A27] mt-1"></i>
+                        <span>+234 (0) 814 197 0095</span>
                     </li>
                 </ul>
             </div>
 
             <div>
-                <h4 class="text-white font-green text-[10px] uppercase tracking-[0.3em] mb-10 border-l-2 border-green-600 pl-4">Newsletter</h4>
-                <p class="text-gray-500 text-xs mb-6">Receive high-impact dispatches and quarterly reports.</p>
+                <h4 class="text-white font-black text-[10px] uppercase tracking-[0.3em] mb-10 border-l-2 border-[#2D5A27] pl-4">Programmatic Sectors</h4>
+                <ul class="space-y-2 mb-8 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
+                    <li><a href="programs.html" class="hover:text-[#2D5A27] transition">Protection & WASH</a></li>
+                    <li><a href="programs.html" class="hover:text-[#2D5A27] transition">Peacebuilding & Security</a></li>
+                    <li><a href="programs.html" class="hover:text-[#2D5A27] transition">Economic Empowerment</a></li>
+                </ul>
                 <form class="relative">
-                    <input type="email" placeholder="Email Address" class="w-full bg-white/5 border border-white/10 py-4 px-6 text-sm text-white focus:outline-none focus:border-green-600 transition">
-                    <button class="absolute right-2 top-2 bottom-2 bg-green-600 px-4 text-xs font-green uppercase tracking-widest hover:bg-white hover:text-green-600 transition">Join</button>
+                    <input type="email" placeholder="Institutional Email" class="w-full bg-white/5 border border-white/10 py-4 px-6 text-xs text-white focus:outline-none focus:border-[#2D5A27] transition">
+                    <button class="absolute right-2 top-2 bottom-2 bg-[#2D5A27] px-4 text-[9px] font-black uppercase tracking-widest hover:bg-white hover:text-[#2D5A27] transition text-white">Join</button>
                 </form>
-                <div class="mt-8 pt-8 border-t border-white/5">
-                    <p class="text-[10px] text-gray-600 uppercase font-green tracking-widest leading-relaxed">
-                        Registration: CAC IT/39885<br>
-                        DUNS: 55-667-8892
-                    </p>
-                </div>
             </div>
         </div>
 
         <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex gap-8 text-[9px] font-green uppercase tracking-widest text-gray-600">
+            <div class="flex gap-8 text-[9px] font-black uppercase tracking-widest text-gray-600">
                 <a href="#" class="hover:text-white transition">Privacy Protocol</a>
                 <a href="#" class="hover:text-white transition">Terms of Engagement</a>
-                <a href="#" class="hover:text-white transition">Cookie Policy</a>
+                <p>© 2026 GEPaDC. CAC IT/39885</p>
             </div>
             <div class="flex items-center gap-6">
                 <div class="text-right">
                     <p class="text-gray-500 text-[9px] uppercase tracking-widest font-bold italic">Directed by</p>
-                    <p class="text-white text-[10px] font-green uppercase tracking-widest">Zion Netcom Solutions Limited</p>
+                    <p class="text-white text-[10px] font-black uppercase tracking-widest">Zion Netcom Solutions Limited</p>
                 </div>
-                <div class="w-12 h-12 bg-green-600 text-white flex items-center justify-center font-green text-xl italic shadow-2xl">Z</div>
+                <div class="w-12 h-12 bg-[#2D5A27] text-white flex items-center justify-center font-black text-xl italic shadow-2xl">Z</div>
             </div>
         </div>
     </div>
 </footer>
 
-    <div id="donateModal" class="fixed inset-0 bg-green/98 z-[200] hidden flex items-center justify-center p-4">
-        <div class="bg-white text-green w-full max-w-5xl flex flex-col md:flex-row h-[80vh] overflow-hidden">
-            <div class="bg-green-600 p-16 md:w-1/2 text-white flex flex-col justify-between">
+
+    <div id="donateModal" class="fixed inset-0 bg-black/98 z-[200] hidden flex items-center justify-center p-4">
+        <div class="bg-white text-black w-full max-w-5xl flex flex-col md:flex-row h-[80vh] overflow-hidden">
+            <div class="bg-[#2D5A27] p-12 md:w-1/2 text-white flex flex-col justify-between">
                 <div>
-                    <h2 class="text-6xl font-green italic leading-none mb-10 uppercase tracking-tighter font-heading">Secure <br>Giving.</h2>
-                    <div class="space-y-8 uppercase tracking-widest">
-                        <div><p class="text-[10px] opacity-50 font-green">Account No.</p><p class="text-4xl font-green italic tracking-tighter">0123456789</p></div>
-                        <div><p class="text-[10px] opacity-50 font-green">Bank Name.</p><p class="text-4xl font-green italic tracking-tighter">Stanbic IBTC</p></div>
-                        <div><p class="text-[10px] opacity-50 font-green">Account Name.</p><p class="text-4xl font-green italic tracking-tighter">GEPaDC</p></div>
+                    <h2 class="text-5xl font-black italic font-heading mb-8 uppercase">Secure <br>Giving.</h2>
+                    <div class="space-y-6 uppercase tracking-widest">
+                        <div><p class="text-[9px] opacity-60 font-black">Account No.</p><p class="text-3xl font-black italic">0123456789</p></div>
+                        <div><p class="text-[9px] opacity-60 font-black">Account Name.</p><p class="text-3xl font-black italic">GEPaDC Nigeria</p></div>
+                        <div><p class="text-[9px] opacity-60 font-black">Bank Name.</p><p class="text-3xl font-black italic">GTBank</p></div>
                     </div>
                 </div>
-                <button onclick="toggleModal()" class="text-left font-green text-xs uppercase border-b border-white pb-2 inline-block w-fit">Cancel</button>
+                <button onclick="toggleModal()" class="text-left font-black text-[10px] uppercase border-b border-white pb-1 inline-block w-fit">Cancel</button>
             </div>
-            <div class="p-16 md:w-1/2 overflow-y-auto">
-                <form id="donorForm" class="space-y-10">
-                    <input type="text" id="donorName" placeholder="Full Identity" requigreen class="w-full border-b-2 border-green/10 py-4 outline-none focus:border-green-600 transition text-xl font-heading">
-                    <input type="number" id="donorAmount" placeholder="Amount (NGN)" requigreen class="w-full border-b-2 border-green/10 py-4 outline-none focus:border-green-600 transition text-xl">
-                    <input type="text" id="donorRef" placeholder="Transaction ID" requigreen class="w-full border-b-2 border-green/10 py-4 outline-none focus:border-green-600 transition text-xl">
-                    <button type="submit" class="w-full bg-green text-black py-6 font-green uppercase text-xs tracking-widest hover:bg-green-600 transition">Confirm Contribution</button>
+            <div class="p-12 md:w-1/2 overflow-y-auto">
+                <form id="donorForm" class="space-y-8">
+                    <input type="text" id="donorName" placeholder="Full Identity" required class="w-full border-b-2 py-3 outline-none focus:border-[#2D5A27] transition text-lg font-heading">
+                    <input type="number" id="donorAmount" placeholder="Amount (NGN)" required class="w-full border-b-2 py-3 outline-none focus:border-[#2D5A27] transition text-lg">
+                    <button type="submit" class="w-full bg-black text-white py-5 font-black uppercase text-[10px] tracking-widest hover:bg-[#2D5A27] transition">Confirm Contribution</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <div id="newsModal" class="fixed inset-0 bg-green/95 z-[200] hidden flex items-center justify-center p-4 backdrop-blur-md">
-        <div class="bg-white text-green w-full max-w-4xl max-h-[90vh] overflow-y-auto relative shadow-2xl">
-            <button onclick="closeNewsModal()" class="sticky top-0 float-right m-6 text-4xl font-light hover:text-green-600 transition z-50 bg-white/80 rounded-full w-12 h-12">&times;</button>
+    <div id="newsModal" class="fixed inset-0 bg-black/95 z-[200] hidden flex items-center justify-center p-4 backdrop-blur-md">
+        <div class="bg-white text-black w-full max-w-4xl max-h-[90vh] overflow-y-auto relative">
+            <button onclick="closeNewsModal()" class="sticky top-0 float-right m-4 text-3xl font-light hover:text-[#2D5A27] transition z-50">×</button>
             <div id="newsFullContent" class="p-8 md:p-16"></div>
         </div>
     </div>
@@ -295,8 +291,4 @@
         setInterval(updateTime, 1000); updateTime();
     </script>
 </body>
-
 </html>
-
-
-
