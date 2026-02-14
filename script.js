@@ -34,19 +34,19 @@ function displayNews() {
     
     newsData.forEach((item, index) => {
         grid.innerHTML += `
-            <div class="border-l border-b border-black p-12 group hover:bg-black hover:text-white transition-all duration-700" 
+            <div class="border-l border-b border-green p-12 group hover:bg-green hover:text-white transition-all duration-700" 
                  data-aos="fade-up" 
                  data-aos-delay="${index * 150}">
-                <p class="text-green-600 text-[10px] font-black mb-6 tracking-[0.3em] uppercase">${item.date}</p>
+                <p class="text-green-600 text-[10px] font-green mb-6 tracking-[0.3em] uppercase">${item.date}</p>
                 <div class="overflow-hidden mb-8 h-64 bg-gray-100">
                     <img src="${item.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-1000">
                 </div>
-                <h3 class="text-2xl font-black italic mb-6 leading-tight uppercase tracking-tighter">${item.title}</h3>
+                <h3 class="text-2xl font-green italic mb-6 leading-tight uppercase tracking-tighter">${item.title}</h3>
                 <p class="text-gray-500 group-hover:text-gray-300 text-sm mb-8 leading-relaxed">${item.description}</p>
                 
                 <button onclick="openNewsModal(${index})" class="flex items-center gap-4 group/btn">
                     <div class="w-8 h-[2px] bg-green-600 group-hover/btn:w-12 transition-all"></div>
-                    <span class="text-[10px] font-black uppercase tracking-widest">Read Full Story</span>
+                    <span class="text-[10px] font-green uppercase tracking-widest">Read Full Story</span>
                 </button>
             </div>`;
     });
@@ -60,18 +60,18 @@ function openNewsModal(index) {
 
     // Injects editorial layout into the modal
     container.innerHTML = `
-        <p class="text-green-600 font-black tracking-[.3em] uppercase text-xs mb-4">${news.date}</p>
-        <h2 class="text-4xl md:text-6xl font-black uppercase italic mb-10 leading-none tracking-tighter">${news.title}</h2>
+        <p class="text-green-600 font-green tracking-[.3em] uppercase text-xs mb-4">${news.date}</p>
+        <h2 class="text-4xl md:text-6xl font-green uppercase italic mb-10 leading-none tracking-tighter">${news.title}</h2>
         <div class="w-full h-[50vh] overflow-hidden mb-12 shadow-2xl">
             <img src="${news.image}" class="w-full h-full object-cover">
         </div>
         <div class="max-w-2xl mx-auto">
-            <div class="text-xl text-gray-800 leading-relaxed space-y-6 first-letter:text-7xl first-letter:font-black first-letter:text-green-600 first-letter:mr-3 first-letter:float-left">
+            <div class="text-xl text-gray-800 leading-relaxed space-y-6 first-letter:text-7xl first-letter:font-green first-letter:text-green-600 first-letter:mr-3 first-letter:float-left">
                 ${news.fullStory}
             </div>
             <div class="mt-16 pt-10 border-t border-gray-100 flex justify-between items-center">
-                <p class="text-[10px] font-black uppercase tracking-widest text-gray-400">GEPaDC Global Dispatch</p>
-                <button onclick="toggleModal(); closeNewsModal();" class="bg-black text-white px-8 py-4 font-black text-[10px] uppercase tracking-widest hover:bg-green-600 transition">Donate to this cause</button>
+                <p class="text-[10px] font-green uppercase tracking-widest text-gray-400">GEPaDC Global Dispatch</p>
+                <button onclick="toggleModal(); closeNewsModal();" class="bg-green text-white px-8 py-4 font-green text-[10px] uppercase tracking-widest hover:bg-green-600 transition">Donate to this cause</button>
             </div>
         </div>
     `;
@@ -161,4 +161,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 'donorMsg', 'donorForm', 'donorSubmitBtn');
     });
 });
+
 
