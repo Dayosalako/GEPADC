@@ -1,39 +1,6 @@
 // 1. BACKEND LINK
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwQIFq7Ty8uKloBdfgMMl93k7Ku7Z_E-NoGwMgAIbr_89vhnQSBN-989CQJUdzr9LTA/exec';
 
-<nav class="flex justify-between items-center py-4 px-6 md:px-10 sticky top-0 bg-white shadow-sm z-[100] border-b border-gray-100">
-    <div class="flex items-center gap-3">
-        <img src="logo.png" alt="Logo" class="h-10 w-auto">
-        <div class="text-xl md:text-2xl font-heading text-[#2D5A27] tracking-tighter italic">GEPaDC</div>
-    </div>
-
-    <div class="hidden lg:flex space-x-8 font-bold text-[10px] uppercase tracking-widest text-[#1a1a1a]">
-        <a href="index.html" class="text-[#2D5A27]">Home</a>
-        <a href="about.html" class="hover:text-[#2D5A27] transition">Mission</a>
-        <a href="programs.html" class="hover:text-[#2D5A27] transition">Impact</a>
-        <a href="volunteer.html" class="hover:text-[#2D5A27] transition">Join</a>
-        <a href="contact.html" class="hover:text-[#2D5A27] transition">HQ</a>
-    </div>
-
-    <div class="flex items-center gap-4">
-        <button onclick="toggleModal()" class="px-6 py-2 bg-[#2D5A27] text-white font-black text-[10px] uppercase italic shadow-lg hover:bg-black transition">Donate</button>
-        
-        <button onclick="toggleMobileNav()" class="lg:hidden text-[#2D5A27] text-2xl focus:outline-none">
-            <i id="navIcon" class="fas fa-bars"></i>
-        </button>
-    </div>
-
-    <div id="mobileNav" class="fixed inset-0 bg-white z-[150] hidden flex-col items-center justify-center space-y-8 text-xl font-black uppercase tracking-widest transition-all duration-300 lg:hidden">
-        <button onclick="toggleMobileNav()" class="absolute top-6 right-6 text-4xl text-[#2D5A27]">&times;</button>
-        
-        <a href="index.html" onclick="toggleMobileNav()" class="text-[#2D5A27]">Home</a>
-        <a href="about.html" onclick="toggleMobileNav()" class="hover:text-[#2D5A27]">Mission</a>
-        <a href="programs.html" onclick="toggleMobileNav()" class="hover:text-[#2D5A27]">Impact</a>
-        <a href="volunteer.html" onclick="toggleMobileNav()" class="hover:text-[#2D5A27]">Join</a>
-        <a href="contact.html" onclick="toggleMobileNav()" class="hover:text-[#2D5A27]">HQ</a>
-    </div>
-</nav>
-
 // 2. DYNAMIC NEWS DATA (Full Restore)
 const newsData = [
     {
@@ -191,4 +158,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 'donorMsg', 'donorForm', 'donorSubmitBtn');
     });
 });
+
 
